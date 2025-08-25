@@ -39,3 +39,12 @@ void main() {
   final name = 'abc';
   final String name2 = 'abc'; // 타입 설정도 가능(필수는 아님)
 }
+
+void main() {
+  // late : final이나 var 앞에 붙일 수 있는 수식어
+  late final name;
+  // late는 초기 데이터 없이 변수 선언 가능
+  print(name); // 이 경우 late변수이기때문에 오류 발생(값을 넣기 전에는 접근 불가)
+  // api를 통해 데이터를 받은 후, 해당 데이터를 변수에 설정
+  name = 'abc';
+}
