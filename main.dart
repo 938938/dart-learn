@@ -24,3 +24,12 @@ void main() {
     // 이 경우 name이 string임을 알기 때문에, name. 했을 때 stirng 타입에 맞는 옵션 자동 완성
   }
 }
+
+void main() {
+  // null safety : 개발자가 null 값을 참조할 수 없게 함
+  // dart에서는 어떤 변수가 null이 될 수 있음을 명확히 표시해야 함
+  String name = 'abc';
+  // name은 String 값만 가질 수 있음
+  String? name2 = 'abc';
+  name2 = null; // name2는 String도 null도 가질 수 있음
+}
