@@ -33,3 +33,9 @@ void main() {
   String? name2 = 'abc';
   name2 = null; // name2는 String도 null도 가질 수 있음
 }
+
+void main() {
+  // final : 한 번 정의된 변수를 수정할 수 없게 함
+  final name = 'abc';
+  final String name2 = 'abc'; // 타입 설정도 가능(필수는 아님)
+}
