@@ -48,3 +48,10 @@ void main() {
   // api를 통해 데이터를 받은 후, 해당 데이터를 변수에 설정
   name = 'abc';
 }
+
+void main() {
+  // const는 컴파일 때 알고 있는 값을 사용
+  // api로 받거나 혹은 사용자가 입력하는 값은 const가 아닌 final이나 var
+  const name = 'abc'; // 컴파일 시점에 바뀌지 않는 값
+  final username=fetchAPI(); // 컴파일 시점에 바뀌는 값
+}
