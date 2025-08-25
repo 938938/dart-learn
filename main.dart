@@ -12,3 +12,15 @@ void main() {
   // class에서 변수나 property를 선언할 때는 타입 지정
   // var과 명시적 선언 둘 다 변수 업데이트 가능
 }
+
+void main() {
+  // dynamic : 여러가지 타입을 가질 수 있는 변수 설정(사용되는게 추천되지는 않음)
+  var name; // 아무것도 지정하지 않으면 name은 dynamic 타입이 됨
+  dynamic name2; // 이렇게 dynamic으로 명시해줄 수도 있음
+  name = 'abc';
+  name = 123;
+  name = true;
+  if(name is String){
+    // 이 경우 name이 string임을 알기 때문에, name. 했을 때 stirng 타입에 맞는 옵션 자동 완성
+  }
+}
