@@ -94,3 +94,11 @@ void main() {
   Map<int, bool> skills = {1: true, 2: false};
 }
 
+void main() {
+  var numbers = {1,2,3,4}; // Set<int>
+  Set<int> numbers2 ={1,2,3,4};
+  // set에 포함된 값은 모두 유니크
+  numbers.add(1);
+  numbers.add(1);
+  // 이렇게 해도 결과 값은 {1,2,3,4}에서 바뀌지 않음.
+}
