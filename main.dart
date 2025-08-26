@@ -72,3 +72,10 @@ void main() {
   var numbers3 = [1, 2, 3, 4, if (giveMeFive) 5];
   // 위 글은 if(giveMeFive){numbers3.add(5)}와 같음
 }
+
+void main() {
+  // String Interpolation : text에 변수를 추가하는 방법
+  var name = 'abc';
+  var age = 98;
+  var greeting = 'hello my name is $name and I\'m ${age+1}, nice to meet you!';
+}
