@@ -64,3 +64,11 @@ void main() {
   // Dart의 거의 전부가 object로 이루어져있음
   num x = 12; // num은 타입이 int일 수도 있고 double일 수도 있음
 }
+
+void main() {
+  var numbers = [1, 2, 3]; // List<int>
+  List<int> numbers2 = [1, 2, 3];
+  var giveMeFive = true;
+  var numbers3 = [1, 2, 3, 4, if (giveMeFive) 5];
+  // 위 글은 if(giveMeFive){numbers3.add(5)}와 같음
+}
