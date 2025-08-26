@@ -55,3 +55,12 @@ void main() {
   const name = 'abc'; // 컴파일 시점에 바뀌지 않는 값
   final username=fetchAPI(); // 컴파일 시점에 바뀌는 값
 }
+
+void main() {
+  String name = 'abc';
+  bool alive = true;
+  int age = 99;
+  double money = 12.34; // 소수점을 붙일 수 있는 숫자
+  // Dart의 거의 전부가 object로 이루어져있음
+  num x = 12; // num은 타입이 int일 수도 있고 double일 수도 있음
+}
