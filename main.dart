@@ -79,3 +79,8 @@ void main() {
   var age = 98;
   var greeting = 'hello my name is $name and I\'m ${age+1}, nice to meet you!';
 }
+
+void main() {
+  var oldFriends = ['a','b'];
+  var newFriends = ['c','d', for(var friend in oldFriends) '🌼$friend'];
+}
