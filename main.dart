@@ -84,3 +84,13 @@ void main() {
   var oldFriends = ['a','b'];
   var newFriends = ['c','d', for(var friend in oldFriends) '🌼$friend'];
 }
+
+void main() {
+  var player = {
+    'name': 'abc',
+    'xp': 100,
+    'superpower': false,
+  }; // Map<String, Object> 타입. <key타입, value타입>. Object는 any와 같다고 볼 수 있음
+  Map<int, bool> skills = {1: true, 2: false};
+}
+
