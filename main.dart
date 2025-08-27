@@ -116,7 +116,19 @@ String sayHello3(String name) => 'Hello $name, nice to meet you';
 num plus(num a, num b) => a + b;
 
 void main() {
-  // Defining a Function
   sayHello('abc');
   print(sayHello2('abc'));
+}
+
+String sayHello(String name, int age, String country) {
+  return 'Hello $name, you are $age, and you come frome $country';
+}
+
+String sayHello2({required String name, int age = 99, String? country}) {
+  return 'Hello $name, you are $age, and you come frome $country';
+}
+
+void main() {
+  print(sayHello('abc', 99, 'cuba'));
+  print(sayHello2(age: 99, name: 'abc', country: 'cuba'));
 }
