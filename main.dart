@@ -102,3 +102,21 @@ void main() {
   numbers.add(1);
   // 이렇게 해도 결과 값은 {1,2,3,4}에서 바뀌지 않음.
 }
+
+void sayHello(String name) {
+  print('Hello $name, nice to meet you');
+}
+
+String sayHello2(String name) {
+  return 'Hello $name, nice to meet you';
+}
+
+String sayHello3(String name) => 'Hello $name, nice to meet you';
+
+num plus(num a, num b) => a + b;
+
+void main() {
+  // Defining a Function
+  sayHello('abc');
+  print(sayHello2('abc'));
+}
