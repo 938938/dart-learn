@@ -159,3 +159,22 @@ void main() {
   name ??= 'abc'; // name이 null값이면 'abc' 할당
   name ??= 'qwe'; // name이 null이 아니기 때문에 여전히 'abc'가 할당되어있음
 }
+
+typedef ListOfInts = List<int>;
+
+ListOfInts reverseListOfNumbers(ListOfInts list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+typedef UserInfo = Map<String, String>;
+
+String sayHi(UserInfo userInfo) {
+  return 'hi ${userInfo['name']}';
+}
+
+void main() {
+  // Typedef : 자료형이 헷갈릴 때 도움이 될 alias
+  reverseListOfNumbers([1, 2, 3]);
+  sayHi({'name': 'abc'});
+}
