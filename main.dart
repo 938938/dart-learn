@@ -145,3 +145,17 @@ void main() {
   // []는 Optional positional Parameters를 명시할 때 사용
   // []의 사용유무는 호출 시 null을 명시적으로 할당해야하느냐 아니냐의 차이
 }
+
+String capitalizeName(String name) => name.toUpperCase();
+String capitalizeName2(String? name) =>
+    name != null ? name.toUpperCase() : 'ABC';
+String capitalizeName3(String? name) => name?.toUpperCase() ?? 'ABC';
+
+void main() {
+  capitalizeName('abc');
+  capitalizeName2(null);
+
+  String? name;
+  name ??= 'abc'; // name이 null값이면 'abc' 할당
+  name ??= 'qwe'; // name이 null이 아니기 때문에 여전히 'abc'가 할당되어있음
+}
