@@ -132,3 +132,16 @@ void main() {
   print(sayHello('abc', 99, 'cuba'));
   print(sayHello2(age: 99, name: 'abc', country: 'cuba'));
 }
+
+String sayHello(String name, int age, [String? country = 'cuba']) =>
+    'Hello $name, you are $age, and you come frome $country';
+
+String sayHello2(String name, int age, String? country) =>
+    'Hello $name, you are $age, and you come frome $country';
+
+void main() {
+  print(sayHello('abc', 99));
+  print(sayHello2('abc', 99, null));
+  // []는 Optional positional Parameters를 명시할 때 사용
+  // []의 사용유무는 호출 시 null을 명시적으로 할당해야하느냐 아니냐의 차이
+}
