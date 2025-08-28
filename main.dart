@@ -288,3 +288,18 @@ void main() {
     ..xp = 100
     ..team = 'blue'; // abc.name = '123' 과 동일한 작동
 }
+
+enum Team { red, blue } // 굳이 String 형태로 쓰지 않아도 됨
+
+class Player {
+  String name;
+  int xp;
+  Team team;
+
+  Player({required this.name, required this.xp, required this.team});
+}
+
+void main() {
+  var abc = Player(name: 'abc', xp: 50, team: Team.red)
+    ..team = Team.blue;
+}
