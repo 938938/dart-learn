@@ -216,3 +216,27 @@ void main() {
   var player2 = Player('123', 100);
   player2.sayHello();
 }
+
+class Player {
+  String name;
+  int xp;
+  String team;
+  int age;
+
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age,
+  });
+
+  void sayHello() {
+    print('hi, my name $name');
+  }
+}
+
+void main() {
+  var player = Player(name: 'abc', xp: 50, team: 'blue', age: 20);
+  var player2 = Player(name: '123', xp: 150, team: 'red', age: 20);
+  player2.sayHello();
+}
