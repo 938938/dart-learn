@@ -269,3 +269,22 @@ void main() {
   var player2 = Player.createRedPlayer('123', 20);
   player2.sayHello();
 }
+
+class Player {
+  String name;
+  int xp;
+  String team;
+
+  Player({required this.name, required this.xp, required this.team});
+
+  void sayHello() {
+    print('hi, my name $name');
+  }
+}
+
+void main() {
+  var abc = Player(name: 'abc', xp: 50, team: 'red')
+    ..name = '123'
+    ..xp = 100
+    ..team = 'blue'; // abc.name = '123' 과 동일한 작동
+}
