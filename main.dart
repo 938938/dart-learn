@@ -351,3 +351,24 @@ void main() {
   var player = Player(team: Team.red, name: 'abc')
     ..sayHello();
 }
+
+mixin Strong {
+  final double strengthLevel = 1500.99;
+}
+mixin QuickRunner {
+  void runQuick(){
+    print('ruuuuun!');
+  }
+}
+
+enum Team { blue, red }
+
+class Player with Strong, QuickRunner {
+  final Team team;
+}
+
+void main() {
+  // Mixins : 생성자가 없는 클래스, 클래스에 프로퍼티들을 추가하거나 할 때 사용
+  var player = Player()
+    ..runQuick();
+}
