@@ -240,3 +240,32 @@ void main() {
   var player2 = Player(name: '123', xp: 150, team: 'red', age: 20);
   player2.sayHello();
 }
+
+class Player {
+  final String name;
+  int xp, age;
+  String team;
+
+  Player.createBluePlayer({required String name, required int age})
+    : this.age = age,
+      this.name = name,
+      this.team = 'blue',
+      this.xp = 0;
+
+  Player.createRedPlayer(String name, int age)
+    : this.age = age,
+      this.name = name,
+      this.team = 'red',
+      this.xp = 0;
+
+  void sayHello() {
+    print('hi, my name $name');
+  }
+}
+
+void main() {
+  // Named Constructors
+  var player = Player.createBluePlayer(name: 'abc', age: 20);
+  var player2 = Player.createRedPlayer('123', 20);
+  player2.sayHello();
+}
