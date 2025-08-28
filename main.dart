@@ -178,3 +178,23 @@ void main() {
   reverseListOfNumbers([1, 2, 3]);
   sayHi({'name': 'abc'});
 }
+
+class Player {
+  String name = 'abc'; // Class를 생성할 때 타입은 반드시 명시해야함
+  int xp = 100;
+  final String nickname = 'a'; // 값을 변경할 수 없게 설정
+
+  void sayHello() {
+    var name = '123';
+    print(
+      'hi, my name $name',
+    ); // Dart에선 this.의 사용을 권장하지 않음. 동일한 변수 이름이 겹칠 때에만 한정적으로 사용.(이 경우 123의 결과가 출력)
+  }
+}
+
+void main() {
+  // Your First Dart Class
+  var player = Player(); // Player 앞에 new는 선택사항
+  player.name = 'cba'; // class의 값 변경 가능
+  player.sayHello();
+}
