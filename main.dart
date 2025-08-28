@@ -303,3 +303,25 @@ void main() {
   var abc = Player(name: 'abc', xp: 50, team: Team.red)
     ..team = Team.blue;
 }
+
+abstract class Human {
+  void walk();
+}
+
+class Player extends Human {
+  void walk() {
+    print('walking');
+  }
+}
+
+class Coach extends Human {
+  void walk(){
+    print('not walking');
+  }
+  void teaching(){
+    print('teacking');
+  }
+}
+
+void main() {
+}
