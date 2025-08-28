@@ -198,3 +198,21 @@ void main() {
   player.name = 'cba'; // class의 값 변경 가능
   player.sayHello();
 }
+
+class Player {
+  String name;
+  int xp;
+
+  Player(this.name, this.xp); // 받은 값을 name과 xp로 설정
+
+  void sayHello() {
+    print('hi, my name $name');
+  }
+}
+
+void main() {
+  // Constructors
+  var player = Player('abc', 50);
+  var player2 = Player('123', 100);
+  player2.sayHello();
+}
