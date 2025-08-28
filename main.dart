@@ -325,3 +325,29 @@ class Coach extends Human {
 
 void main() {
 }
+
+class Human {
+  final String name;
+  Human({required this.name});
+  void sayHello() {
+    print('hi, my name is $name');
+  }
+}
+
+enum Team { blue, red }
+
+class Player extends Human {
+  final Team team;
+  Player({required this.team, required String name})
+    : super(name: name); // super : (확장을 한) 부모 클래스와 상호작용할 수 있게 해줌
+  @override
+  void sayHello(){
+    super.sayHello();
+    print('and I play for ${team.name}'); // team으로만 하면 Team.red로 출력됨
+  }
+}
+
+void main() {
+  var player = Player(team: Team.red, name: 'abc')
+    ..sayHello();
+}
